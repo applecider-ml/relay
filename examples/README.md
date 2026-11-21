@@ -149,7 +149,7 @@ Figures use the muted palette; the main learning curves have no crowded uncertai
 
 ```bash
 python -m pip install -e ".[teaching]"
-python scripts/examples/execute_astro_notebook.py --output astro_school_local.ipynb
+python scripts/examples/execute_astro_notebook.py --output astronomy_active_learning_local.ipynb
 ```
 
 Alternatively open the student notebook in Jupyter or VS Code and choose **Restart Kernel and Run All**.
