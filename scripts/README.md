@@ -26,7 +26,7 @@ After installing `.[teaching]` from the repository root, these commands execute 
 
 ```bash
 python scripts/examples/execute_digits_notebook.py --mode core --output digits_core_local.ipynb
-python scripts/examples/execute_astro_notebook.py --output astro_school_local.ipynb
+python scripts/examples/execute_astro_notebook.py --output astronomy_active_learning_local.ipynb
 ```
 
 The read-only teaching-data exporters are under `scripts/examples/`; unlike the notebooks, re-exporting source records requires access to the original research artifacts.

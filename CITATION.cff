@@ -5,7 +5,7 @@ title: "RELAY — Active learning for astronomical transients"
 authors:
   - family-names: Kourtesis
     given-names: Dimitris
-repository-code: "https://github.com/DimitrisKour/astro-transient-active-learning"
+repository-code: "https://github.com/applecider-ml/relay"
 license: GPL-3.0-only
 version: "0.1.0"
 keywords:

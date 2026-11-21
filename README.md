@@ -13,31 +13,31 @@ The central question is practical: **which objects should we label next, and how
 | **Pool-based active learning** — uncertainty scoring, selection, budgets, and labeled/unlabeled/pending states | [`al_pipeline.core`](src/al_pipeline/core/) |
 | **Label evidence and oracles** — provider-independent evidence collection and resolution contracts | [`core.evidence`, `core.oracle`, `core.workflow`](src/al_pipeline/core/) |
 | **Astronomical integrations** — ZTF alert handling, BOOM catalogue access, historical survey manifests, AppleCiDEr taxonomy rules | [`al_pipeline.astronomy`](src/al_pipeline/astronomy/) |
-| **Historical AstroMiNN studies** — acquisition policies including random, entropy, diversity, BADGE, BALD, TAILOR, SIMILAR, DIRECT, and AnchorAL | [`research/historical_replay`](scripts/research/historical_replay/README.md) |
+| **Historical AstroMiNN studies** — acquisition policies including random, entropy, diversity, BADGE, BALD, TAILOR, SIMILAR, DIRECT, and AnchorAL | [`research/historical_replay`](scripts/README.md) |
 | **Evaluation and diagnostics** — validation curves, per-class scores, seed variation, acquisition overlap, and run histories | [`core.evaluation`](src/al_pipeline/core/evaluation/), [teaching results](examples/data/README.md) |
 | **Two CPU teaching notebooks** — run an acquisition loop, then analyze real archived astronomy experiments | [Examples](examples/README.md) |
 
 The **core is independent of astronomy and PyTorch**. Historical AstroMiNN studies, by contrast, can require archived datasets, model checkpoints, external code, and HPC resources. The teaching notebooks do not.
 
-## Quick start: notebooks on your own computer
+## Quick start
 
-Requires **Python 3.11 or newer**. Clone the repository and install the teaching dependencies:
+To run the CPU-only notebooks locally, use **Python 3.11 or newer**. Clone the repository and install the teaching dependencies:
 
 ```bash
-git clone https://github.com/DimitrisKour/astro-transient-active-learning.git
-cd astro-transient-active-learning
+git clone https://github.com/applecider-ml/relay.git
+cd relay
 python -m venv .venv
 source .venv/bin/activate                 # macOS/Linux
 python -m pip install -e ".[teaching]"
 ```
 
-On Windows PowerShell, activate the environment with `.venv\Scripts\Activate.ps1` instead. The repository is publicly accessible on GitHub.
+On Windows PowerShell, activate the environment with `.venv\Scripts\Activate.ps1` instead.
 
-Both student notebooks **already contain executed figures** and can be opened immediately in Jupyter or VS Code. To run them from scratch on CPU and save separate, executed copies:
+Both notebooks include executed figures and can be inspected directly in Jupyter or VS Code. To rerun them on CPU without overwriting the published notebooks:
 
 ```bash
 python scripts/examples/execute_digits_notebook.py --mode core --output digits_core_local.ipynb
-python scripts/examples/execute_astro_notebook.py --output astro_school_local.ipynb
+python scripts/examples/execute_astro_notebook.py --output astronomy_active_learning_local.ipynb
 ```
 
 | Notebook | What you do | Data and hardware |
@@ -110,4 +110,4 @@ The default suite runs without private astronomy data or GPUs. Historical experi
 
 **Copyright (c) 2026 Dimitris Kourtesis.** The original software and its accompanying documentation are released under the [GNU General Public License v3.0 (GPL-3.0-only)](LICENSE), to the extent that their copyright is held by the stated author. The project is authored and maintained independently; the integrations do not imply ownership of upstream AppleCiDEr, AstroMiNN, FLARE, Hyrax, survey infrastructure, model architectures, or datasets. See [third-party and research-output scope](THIRD_PARTY.md) for distinctions between this repository's original code and separately supplied scientific systems and data.
 
-For research attribution, see [CITATION.cff](CITATION.cff). For publication and Git-history security checks, see the [pre-publication review](docs/publication_review.md). The experimental notebooks and research scripts are provided for reproducibility; they are not claims of equivalence with independently maintained upstream model implementations.
+For research attribution, see [CITATION.cff](CITATION.cff). For publication and Git-history security checks, see the [repository release audit](docs/publication_review.md). The experimental notebooks and research scripts are provided for reproducibility; they are not claims of equivalence with independently maintained upstream model implementations.

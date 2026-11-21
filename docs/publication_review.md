@@ -1,6 +1,6 @@
-# Pre-publication review
+# Repository security and release review
 
-This repository is intended to be made public **only after** a source and Git-history audit. A clean working tree and a clean default-branch snapshot do not establish that all historical commits, other branches, GitHub Actions logs, or attached artifacts are safe.
+Before publication or a significant release, review the repository's source, Git history, workflows, and attached artifacts. A clean working tree and default-branch snapshot do not establish that earlier commits, other branches, GitHub Actions logs, or attached artifacts are free of sensitive material.
 
 ## Required checks
 
@@ -13,4 +13,4 @@ This repository is intended to be made public **only after** a source and Git-hi
 
 The history scanner is deliberately conservative, not proof of legal title or security. Paths to research environments are references, not credentials, but avoid sharing active access details, unpublished findings or protected research data in issues, logs, and commit messages.
 
-**Visibility is a separate action**. No test, pull request, or license commit makes a private repository public.
+For an existing public repository, repeat the relevant checks before material releases or when new historical research artifacts are added.
